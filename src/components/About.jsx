@@ -34,7 +34,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="text-black py-20 flex flex-col items-center w-full bg-white" id="about">
+    <div className="text-black py-20 flex flex-col items-center w-full" id="about">
       <div className="container mx-auto px-8 md:px-16 lg:px-24 text-center w-full">
         <h2 className="text-5xl font-bold mb-16 font-axy text-red-500">About Me</h2>
         

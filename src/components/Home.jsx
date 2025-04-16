@@ -3,7 +3,7 @@ import MyImg from '../assets/me4.jpeg';
 
 const Home = () => {
   return (
-    <div className="relative bg-white flex justify-center items-center min-h-screen w-screen overflow-hidden" id="home">
+    <div className="relative flex justify-center items-center min-h-screen w-screen overflow-hidden" id="home">
       
       {/* Semi-Circle Background - Positioned to the Left */}
       <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-b from-red-400 to-pink-400 rounded-r-[50%] z-0"></div>

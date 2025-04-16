@@ -20,7 +20,7 @@ const experience = {
 
 const Experience = () => {
   return (
-    <div className="text-black py-20 bg-white relative overflow-hidden flex flex-col items-center" id="exp">
+    <div className="text-black py-20 relative overflow-hidden flex flex-col items-center" id="exp">
       <h2 className="text-5xl font-axy text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-pink-500">
         Experience
       </h2>
