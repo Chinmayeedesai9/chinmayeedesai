@@ -5,7 +5,6 @@ import me1Image from "../assets/rfid.jpeg";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-// Replace with your actual image imports for certifications
 import cert1 from "../assets/cert1.jpeg";
 import cert2 from "../assets/cert2.jpeg";
 import cert3 from "../assets/cert3.jpeg";
@@ -69,9 +68,11 @@ const certifications = [
 
 const Projects = () => {
   return (
-    <div className="text-white py-20" id="projects">
-      <div className="container mx-auto px-8 md:px-16 lg:px-24">
-        <h2 className="text-4xl font-axy font-bold text-red-500 text-center mb-12">My Projects</h2>
+    <div className="text-white py-20 " id="projects">
+      <div className="container mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
+        <h2 className="text-4xl font-axy font-bold text-red-600 text-center mb-12">
+          My Projects
+        </h2>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -79,18 +80,24 @@ const Projects = () => {
             <div
               key={project.id}
               className="p-6 rounded-lg hover:shadow-lg transform transition-transform duration-300 hover:scale-105 
-              bg-gradient-to-r from-pink-400 to-red-400 text-white"
+              bg-gradient-to-br from-[#8B0000] to-[#A52A2A] text-white shadow-md"
             >
-              <img src={project.image} alt={project.name} className="rounded-lg mb-4 w-full h-48 object-cover" />
-              <h3 className="text-2xl font-bold font-small mb-2">{project.name}</h3>
-              <p className="text-white font-three">{project.description}</p>
+              <img
+                src={project.image}
+                alt={project.name}
+                className="rounded-lg mb-4 w-full h-48 object-cover"
+              />
+              <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
+              <p className="text-sm">{project.description}</p>
             </div>
           ))}
         </div>
 
-        {/* Certifications Section Below the Projects */}
+        {/* Certifications Section */}
         <div className="mt-24">
-          <h2 className="text-4xl font-axy font-bold text-red-500 text-center mb-12">My Certifications</h2>
+          <h2 className="text-4xl font-axy font-bold text-red-600 text-center mb-12">
+            My Certifications
+          </h2>
           <div className="max-w-5xl mx-auto px-4 py-12">
             <Carousel
               autoPlay
@@ -102,20 +109,23 @@ const Projects = () => {
               {certifications.map((cert, index) => (
                 <div
                   key={index}
-                  className="rounded-lg bg-gradient-to-r from-pink-400 to-red-400 p-10 text-white shadow-xl"
+                  className="rounded-lg bg-gradient-to-br from-[#8B0000] to-[#A52A2A] p-8 sm:p-10 text-white shadow-lg"
                 >
                   <img
                     src={cert.image}
                     alt={cert.title}
-                    className="rounded-lg h-[28rem] object-contain mx-auto"
+                    className="rounded-lg h-[24rem] sm:h-[28rem] object-contain mx-auto"
                   />
-                  <h3 className="text-3xl font-bold mt-6">{cert.title}</h3>
-                  <p className="mt-4 font-three text-lg">{cert.description}</p>
+                  <h3 className="text-2xl sm:text-3xl font-bold mt-6 text-center">
+                    {cert.title}
+                  </h3>
+                  <p className="mt-4 text-base sm:text-lg text-center">
+                    {cert.description}
+                  </p>
                 </div>
               ))}
             </Carousel>
           </div>
-
         </div>
       </div>
     </div>

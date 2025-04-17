@@ -8,3 +8,8 @@
   --font-small: "Bona Nova", "serif";
   --font-three: "Zilla Slab", "serif";
 }
+
+.stroke-text {
+  -webkit-text-stroke: 1px #8B0000;
+  color: transparent;
+}

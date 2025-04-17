@@ -6,12 +6,12 @@ import Experience from './components/Experiences';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import background from './assets/wallpaper.jpeg';
+import background from './assets/background1.jpg';
 
 function App() {
   return (
     <div
-      className="min-h-screen bg-cover bg-center bg-repeat"
+      className="min-h-screen bg-top bg-repeat-y bg-contain"
       style={{
         backgroundImage: `url(${background})`,
       }}
@@ -28,6 +28,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;
