@@ -4,6 +4,8 @@ import meImage from "../assets/complainr.jpeg";
 import me1Image from "../assets/rfid.jpeg";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Background1 from "../assets/background2.jpg"
+
 
 import cert1 from "../assets/cert1.jpeg";
 import cert2 from "../assets/cert2.jpeg";
@@ -36,33 +38,33 @@ const projects = [
 const certifications = [
   {
     image: cert1,
-    title: "Google Data Analytics Certificate",
-    description: "Learned data cleaning, visualization, and R programming.",
+    title: "Cloud Computing NPTEL",
+    description: "Learned data complete Cloud computing and passed with 91% aggregate.",
   },
   {
     image: cert2,
-    title: "Salesforce Marketing Cloud",
-    description: "Hands-on experience with journeys, automations, and SQL queries.",
+    title: "IR4.0 Foundation",
+    description: "Completed the IR 4.0 foundation course provided by Techsaksham and edunet.",
   },
   {
     image: cert3,
-    title: "Python for Data Science",
-    description: "Covers data manipulation, Pandas, NumPy, and Matplotlib.",
+    title: "AI-ML virtual Internship",
+    description: "Completed AICTE virtual internship supported by Google for Developers and earned all the badges.",
   },
   {
     image: cert4,
-    title: "SQL & Databases Certificate",
-    description: "Mastered joins, subqueries, and relational databases.",
+    title: "Data Engineering virtual internship",
+    description: "Completed AICTE virtual internship supported by AWS Academy.",
   },
   {
     image: cert5,
-    title: "React Frontend Development",
-    description: "Built components, hooks, and interactive UIs with React.",
+    title: "Supervised Machine Learning",
+    description: "Learned Supervised Machine-learning: Regression and classification from coursera supported by Stanford University.",
   },
   {
     image: cert6,
-    title: "Agile with Jira",
-    description: "Worked in sprints, storyboarding, and Agile ceremonies.",
+    title: "Avniya Conference",
+    description: "Participated in Avinya Conference for my research paper for Image Paragraph Generation for Attendance Application.",
   },
 ];
 
@@ -70,7 +72,7 @@ const Projects = () => {
   return (
     <div className="text-white py-20 " id="projects">
       <div className="container mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
-        <h2 className="text-4xl font-axy font-bold text-red-600 text-center mb-12">
+        <h2 className="text-4xl font-axy font-bold text-slate-700 text-center mb-12">
           My Projects
         </h2>
 
@@ -80,7 +82,7 @@ const Projects = () => {
             <div
               key={project.id}
               className="p-6 rounded-lg hover:shadow-lg transform transition-transform duration-300 hover:scale-105 
-              bg-gradient-to-br from-[#8B0000] to-[#A52A2A] text-white shadow-md"
+              bg-gradient-to-br from-[#576f55] to-[#3e5135] text-white shadow-md"
             >
               <img
                 src={project.image}
@@ -95,7 +97,7 @@ const Projects = () => {
 
         {/* Certifications Section */}
         <div className="mt-24">
-          <h2 className="text-4xl font-axy font-bold text-red-600 text-center mb-12">
+          <h2 className="text-4xl font-axy font-bold text-slate-700 text-center mb-12">
             My Certifications
           </h2>
           <div className="max-w-5xl mx-auto px-4 py-12">
@@ -109,7 +111,10 @@ const Projects = () => {
               {certifications.map((cert, index) => (
                 <div
                   key={index}
-                  className="rounded-lg bg-gradient-to-br from-[#8B0000] to-[#A52A2A] p-8 sm:p-10 text-white shadow-lg"
+                  className="rounded-lg p-8 sm:p-10 text-white shadow-lg bg-cover bg-center"
+                  style={{
+                    backgroundImage: `url(${Background1})`
+                  }}
                 >
                   <img
                     src={cert.image}

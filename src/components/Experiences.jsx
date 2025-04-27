@@ -1,5 +1,8 @@
 import React from "react";
 import meexp from "../assets/meexp.jpeg";
+import Background1 from "../assets/background2.jpg";
+import ContactBackground from '../assets/background1.jpg'; // update path if needed
+
 
 const experience = {
   company: "Colgate-Palmolive (India) Ltd.",
@@ -20,45 +23,68 @@ const experience = {
 
 const Experience = () => {
   return (
-    <div className="text-black py-20 flex flex-col items-center w-full " id="exp">
-      <h2 className="text-5xl font-axy text-center mb-12 text-red-500">
+    <div className="text-black py-20 flex flex-col items-center w-full" id="exp">
+      <h2 className="text-5xl font-axy text-center mb-12 text-slate-700">
         Experience
       </h2>
 
-      <div className="container mx-auto px-6 md:px-16 lg:px-24 flex flex-col lg:flex-row-reverse items-center justify-center gap-12 w-full">
+      <div className="container mx-auto px-4 md:px-8 lg:px-0 flex flex-col-reverse lg:flex-row-reverse items-center justify-center w-full">
 
         {/* Image Section */}
-        <div className="w-full max-w-md lg:max-w-lg h-[400px] md:h-[450px] relative">
-          <div className="w-full h-full p-2 border-4 border-red-500 rounded-tr-[180px] rounded-br-[180px] overflow-hidden">
+        <div
+          className="w-full max-w-md lg:max-w-lg h-[400px] md:h-[450px] 
+          rounded-bl-[180px] rounded-br-[180px] 
+          lg:rounded-bl-none lg:rounded-tr-[180px] lg:rounded-br-[180px]
+          relative shadow-lg overflow-hidden"
+          style={{ backgroundImage: `url(${ContactBackground})`, backgroundSize: "cover", backgroundPosition: "center" }}
+        >
+          <div className="w-full h-full p-2 
+            rounded-bl-[180px] rounded-br-[180px] 
+            lg:rounded-bl-none lg:rounded-tr-[180px] lg:rounded-br-[180px] overflow-hidden">
             <img
               src={meexp}
               alt="Experience"
-              className="w-full h-full object-cover rounded-tr-[180px] rounded-br-[180px]"
+              className="w-full h-full border-2 border-brandgreen2 object-cover 
+              rounded-bl-[180px] rounded-br-[180px] 
+              lg:rounded-bl-none lg:rounded-tr-[180px] lg:rounded-br-[180px]"
             />
           </div>
         </div>
 
         {/* Experience Section */}
-        <div className="bg-white p-8 md:p-10 border-2 border-red-500 rounded-2xl shadow-lg w-full max-w-3xl text-center">
-          <h3 className="text-3xl md:text-4xl font-bold text-red-600 mb-3 font-axy">
+        <div
+          className="p-8 md:p-10 border-3 border-brandgreen2 rounded-2xl shadow-lg w-full max-w-3xl text-center"
+          style={{ backgroundImage: `url(${Background1})`, backgroundSize: "cover", backgroundPosition: "center" }}
+        >
+          <h3
+            className="text-3xl md:text-4xl font-bold text-white mb-3 font-axy"
+            style={{
+              textShadow: `-2px -2px rgb(62, 81, 53), 2px -2px rgb(62, 81, 53), -2px 2px rgb(62, 81, 53), 2px 2px rgb(62, 81, 53)`,
+            }}
+          >
             {experience.company}
           </h3>
-          <p className="text-gray-700 text-lg font-medium">
+          <p className="text-slate-900 text-lg font-medium">
             {experience.role} | {experience.duration}
           </p>
-          <p className="text-gray-700 text-base md:text-lg mt-6 leading-relaxed font-three">
+          <p className="text-white text-base md:text-lg mt-6 leading-relaxed font-three">
             {experience.description}
           </p>
 
           {/* Skills */}
-          <h4 className="text-2xl font-semibold text-red-600 mt-8 font-axy">
+          <h4
+            className="text-2xl font-semibold text-white mt-8 font-axy"
+            style={{
+              textShadow: `-2px -2px rgb(62, 81, 53), 2px -2px rgb(62, 81, 53), -2px 2px rgb(62, 81, 53), 2px 2px rgb(62, 81, 53)`,
+            }}
+          >
             Skills Gained
           </h4>
           <div className="flex flex-wrap justify-center gap-3 mt-4">
             {experience.skills.map((skill, index) => (
               <span
                 key={index}
-                className="bg-red-500 text-white px-4 py-2 rounded-full text-sm shadow-md font-three"
+                className="bg-white text-bold text-slate-950 px-4 py-2 rounded-full text-sm shadow-md font-three"
               >
                 {skill}
               </span>

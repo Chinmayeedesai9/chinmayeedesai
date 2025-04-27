@@ -9,7 +9,87 @@
   --font-three: "Zilla Slab", "serif";
 }
 
+/* Brand Color 1 - #5b7d87 */
+.bg-brandblue {
+  background-color: #5b7d87;
+}
+.text-brandblue {
+  color: #5b7d87;
+}
+.border-brandblue {
+  border-color: #5b7d87;
+}
+/*rgb(91, 125, 135)*/
+
+/* Brand Color 2 - #7aa0ab */
+.bg-brandblue2 {
+  background-color: #7aa0ab;
+}
+.text-brandblue2 {
+  color: #7aa0ab;
+}
+.border-brandblue2 {
+  border-color: #7aa0ab;
+}
+/*rgb(122, 160, 171)*/
+
+
+
+.bg-brandgreen {
+  background-color: #576f55;
+}
+.text-brandgreen {
+  color: #576f55;
+}
+.border-brandgreen {
+  border-color: #576f55;
+}
+/*rgb(87, 111, 85)*/
+
+.bg-brandgreen2 {
+  background-color: #3e5135;
+}
+.text-brandgreen2 {
+  color: #3e5135;
+}
+.border-brandgreen2 {
+  border-color: #3e5135;
+}
+/*rgb(62, 81, 53)*/
+
+
+
+@keyframes pulse-left {
+  0%, 100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.05);
+  }
+}
+
+.animate-pulse-left {
+  animation: pulse-left 3s ease-in-out infinite;
+}
+
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+
+
+
 .stroke-text {
-  -webkit-text-stroke: 1px #8B0000;
+  -webkit-text-stroke: 1px #263064;
   color: transparent;
 }

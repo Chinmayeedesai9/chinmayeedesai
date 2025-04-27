@@ -6,7 +6,7 @@ import Experience from './components/Experiences';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import background from './assets/background1.jpg';
+import background from './assets/background5.jpg';
 
 function App() {
   return (
